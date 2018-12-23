@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Digits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgH-36-Ph8">
+                                <rect key="frame" x="0.0" y="362" width="375" height="375"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbZ-5e-aao">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="122"/>
+                                        <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98487380560000004" green="0.9801159612" blue="0.98963165009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tbZ-5e-aao" secondAttribute="bottom" id="VKn-P0-rhA"/>
+                                    <constraint firstItem="tbZ-5e-aao" firstAttribute="leading" secondItem="ZgH-36-Ph8" secondAttribute="leading" id="c4B-wG-Jxr"/>
+                                    <constraint firstItem="tbZ-5e-aao" firstAttribute="top" secondItem="ZgH-36-Ph8" secondAttribute="top" id="gSa-4V-4lP"/>
+                                    <constraint firstAttribute="trailing" secondItem="tbZ-5e-aao" secondAttribute="trailing" id="wyH-7Q-qJB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azo-BK-LUa" customClass="DrawView" customModule="Digits" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="363"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9F4-Y6-KJW">
+                                <rect key="frame" x="0.0" y="722" width="375" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="center" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9l-nh-7Md">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="90"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wM0-uP-mch"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea4-tH-pI9">
+                                        <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="90"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="Detect">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="detect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbH-pw-iKO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="vVm-Jq-Ajk"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9F4-Y6-KJW" secondAttribute="trailing" id="BGG-cm-Ic7"/>
+                            <constraint firstItem="Azo-BK-LUa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="DHV-xG-9zN"/>
+                            <constraint firstItem="9F4-Y6-KJW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SW8-NC-ve9"/>
+                            <constraint firstItem="ZgH-36-Ph8" firstAttribute="trailing" secondItem="Azo-BK-LUa" secondAttribute="trailing" id="TCQ-Dw-E33"/>
+                            <constraint firstItem="ZgH-36-Ph8" firstAttribute="top" secondItem="Azo-BK-LUa" secondAttribute="bottom" constant="-1" id="V9w-M5-Xi1"/>
+                            <constraint firstAttribute="bottom" secondItem="ZgH-36-Ph8" secondAttribute="bottom" constant="75" id="biC-V2-cau"/>
+                            <constraint firstItem="ZgH-36-Ph8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="362" id="gz0-7B-GP3"/>
+                            <constraint firstItem="Azo-BK-LUa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hDK-Z7-YEi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9F4-Y6-KJW" secondAttribute="bottom" constant="-34" id="sw4-cO-wdC"/>
+                            <constraint firstItem="Azo-BK-LUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yAT-Fn-bAG"/>
+                            <constraint firstItem="ZgH-36-Ph8" firstAttribute="leading" secondItem="Azo-BK-LUa" secondAttribute="leading" id="yFT-Cy-9FB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawView" destination="Azo-BK-LUa" id="1Ic-mM-q6x"/>
+                        <outlet property="predictLabel" destination="tbZ-5e-aao" id="xhO-NC-EL0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
+        </scene>
+    </scenes>
+</document>
